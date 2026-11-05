@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SadiaNet .so - Secure Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="logo-box">S</div>
+        <span class="brand-text">SadiaNet</span>
+        <span class="tld-badge">.so</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="register-btn">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+          Register
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Stepper -->
+  <section class="stepper-section">
+    <div class="stepper-wrapper">
+      <div class="step completed">
+        <div class="step-circle">&#10003;</div>
+        <span class="step-label">1. Search</span>
+      </div>
+      <div class="step-line completed"></div>
+
+      <div class="step completed">
+        <div class="step-circle">&#10003;</div>
+        <span class="step-label">2. Customer Info</span>
+      </div>
+      <div class="step-line completed"></div>
+
+      <div class="step active">
+        <div class="step-circle">3</div>
+        <span class="step-label">3. Payment</span>
+      </div>
+      <div class="step-line"></div>
+
+      <div class="step upcoming">
+        <div class="step-circle">4</div>
+        <span class="step-label">4. Confirmation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    <!-- Header Title & Amount -->
+    <div class="page-header">
+      <div class="header-left">
+        <h1 class="page-title">Secure Payment</h1>
+        <p class="page-subtitle">Choose your preferred mobile payment method to finalize your domain registration.</p>
+      </div>
+      <div class="header-right">
+        <span class="total-label">TOTAL PAYMENT</span>
+        <div class="total-amount-row">
+          <span class="total-amount">$15.18</span>
+          <span class="total-converted">(or 395,000 SOS)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Domain Ref Card -->
+    <div class="domain-card">
+      <div class="domain-info">
+        <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+          <path d="M2 12h20"/>
+        </svg>
+        <strong class="domain-name">sadia.so</strong>
+        <span class="domain-badge">1 Year Registration</span>
+      </div>
+      <div class="order-ref">Order Ref: <strong>#MGN-89421</strong></div>
+    </div>
+
+    <!-- Two-column Layout -->
+    <div class="content-grid">
+      <!-- Left Column: Payment Selection & Phone -->
+      <div class="payment-column">
+        <h2 class="section-title">Select Mobile Money Provider</h2>
+
+        <!-- Provider 1: WaafiPay -->
+        <label class="provider-card selected" data-provider="waafipay" data-merchant="WAAFI-77402">
+          <div class="provider-left">
+            <span class="custom-radio"><span class="radio-inner"></span></span>
+            <div class="provider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+              </svg>
+            </div>
+            <div class="provider-details">
+              <div class="provider-name-row">
+                <span class="provider-name">WaafiPay</span>
+                <span class="provider-badge">Recommended</span>
+              </div>
+              <p class="provider-desc">Fastest mobile &amp; card wallet</p>
+            </div>
+          </div>
+          <div class="provider-right">
+            <span class="check-icon">&#10003;</span>
+          </div>
+        </label>
+
+        <!-- Provider 2: EVC Plus -->
+        <label class="provider-card" data-provider="evc" data-merchant="HORMUUD-89214">
+          <div class="provider-left">
+            <span class="custom-radio"><span class="radio-inner"></span></span>
+            <div class="provider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                <line x1="12" y1="18" x2="12.01" y2="18"/>
+              </svg>
+            </div>
+            <div class="provider-details">
+              <div class="provider-name-row">
+                <span class="provider-name">EVC Plus</span>
+                <span class="provider-sub">Hormuud Telecom</span>
+              </div>
+              <p class="provider-desc">Pay directly via mobile PIN prompt</p>
+            </div>
+          </div>
+          <div class="provider-right">
+            <span class="ussd-tag">*712#</span>
+          </div>
+        </label>
+
+        <!-- Provider 3: eDahab -->
+        <label class="provider-card" data-provider="edahab" data-merchant="EDAHAB-44109">
+          <div class="provider-left">
+            <span class="custom-radio"><span class="radio-inner"></span></span>
+            <div class="provider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="provider-details">
+              <div class="provider-name-row">
+                <span class="provider-name">eDahab</span>
+                <span class="provider-sub">Somtel / Dahabshiil</span>
+              </div>
+              <p class="provider-desc">Instant mobile money push</p>
+            </div>
+          </div>
+          <div class="provider-right">
+            <span class="ussd-tag">*789#</span>
+          </div>
+        </label>
+
+        <!-- Payment Authorization -->
+        <div class="auth-card">
+          <div class="auth-header">
+            <span class="auth-title">Payment Authorization</span>
+            <span class="merchant-badge" id="merchant-id">• Merchant ID: WAAFI-77402</span>
+          </div>
+
+          <label class="input-label" for="phone-input">Customer Mobile Number</label>
+          <div class="phone-input-wrapper">
+            <div class="country-prefix">
+              <!-- Somalia Flag SVG -->
+              <svg class="somalia-flag" viewBox="0 0 36 24">
+                <rect width="36" height="24" fill="#4189DD" />
+                <polygon points="18,5.2 20.2,11.8 27.2,11.8 21.5,15.9 23.7,22.5 18,18.4 12.3,22.5 14.5,15.9 8.8,11.8 15.8,11.8" fill="#FFFFFF" />
+              </svg>
+              <span>+252</span>
+            </div>
+            <input type="tel" id="phone-input" value="61 584 9201" placeholder="61 XXX XXXX" />
+          </div>
+
+          <div class="auth-notice">
+            <span class="info-icon">&#9432;</span>
+            <span>You will receive an instant USSD authorization prompt on your phone to approve the payment.</span>
+          </div>
+        </div>
+
+        <!-- 24/7 Registry Support -->
+        <div class="support-card">
+          <svg class="support-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+          </svg>
+          <div class="support-text">
+            <strong>24/7 Registry Support</strong>
+            <p>Questions about USSD prompts? Reach out to <a href="mailto:support@magacnet.so">support@magacnet.so</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Order Breakdown -->
+      <aside class="summary-column">
+        <div class="breakdown-card">
+          <h2 class="breakdown-title">Order Breakdown</h2>
+
+          <div class="breakdown-list">
+            <div class="breakdown-item">
+              <div>
+                <div class="item-name">Domain: dalmar.so</div>
+                <div class="item-sub">Standard 1-year registry fee</div>
+              </div>
+              <div class="item-price">$15.00</div>
+            </div>
+
+            <div class="breakdown-item">
+              <div>
+                <div class="item-name">Taxes &amp; Fees</div>
+                <div class="item-sub">Registry compliance fee</div>
+              </div>
+              <div class="item-price">$0.18</div>
+            </div>
+
+            <div class="breakdown-item">
+              <div>
+                <div class="item-name">WHOIS Privacy Protection</div>
+                <div class="item-sub">Included free forever</div>
+              </div>
+              <div class="item-price">$0.00</div>
+            </div>
+          </div>
+
+          <div class="breakdown-divider"></div>
+
+          <div class="breakdown-total">
+            <div>
+              <div class="total-title">Total Due</div>
+              <div class="total-sos">Equivalent to 395,000 SOS</div>
+            </div>
+            <div class="total-val">$15.18</div>
+          </div>
+
+          <button id="pay-btn" class="pay-btn">
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <a href="sucessfull.html">Pay Now ($15.18) </a>
+          </button>
+
+          <div class="security-badge">
+            <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Encrypted transactions via Somali Central Bank compliant mobile money gateways</span>
+          </div>
+
+          <a href="#back" class="back-link">&#8592; Back to Customer Details</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
