@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete a simulated MagacNet domain payment.">
+    <title>Payment | MagacNet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <script src="payment.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="MagacNet home">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">MagacNet<span>.so</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <a class="cart-button" href="cart.html" aria-label="Open shopping cart">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.25"/><circle cx="19" cy="20" r="1.25"/><path d="M3 4h2l2.5 10.2a2 2 0 0 0 2 1.5h7.8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="payment-page">
+        <div class="checkout-progress" aria-label="Payment progress">
+            <span class="complete">Cart</span><i></i><span class="active">Payment</span><i></i><span>Success</span>
+        </div>
+
+        <div class="payment-heading">
+            <a class="back-link" href="cart.html" aria-label="Back to cart">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+                Back to Cart
+            </a>
+            <p>Secure demonstration</p>
+            <h1>Complete Your Payment</h1>
+        </div>
+
+        <div class="payment-layout">
+            <section class="payment-panel">
+                <div class="section-heading">
+                    <span>1</span>
+                    <div><h2>Payment Method</h2><p>Select a test payment method</p></div>
+                </div>
+
+                <form id="payment-form" novalidate>
+                    <fieldset class="payment-methods">
+                        <legend class="sr-only">Choose a payment method</legend>
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="EVC Plus">
+                            <span class="method-mark">EVC</span>
+                            <span class="method-copy"><strong>EVC Plus</strong><small>Mobile wallet simulation</small></span>
+                            <span class="radio-mark" aria-hidden="true"></span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="ZAAD">
+                            <span class="method-mark">ZAAD</span>
+                            <span class="method-copy"><strong>ZAAD</strong><small>Mobile wallet simulation</small></span>
+                            <span class="radio-mark" aria-hidden="true"></span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment-method" value="Sahal">
+                            <span class="method-mark">SAHAL</span>
+                            <span class="method-copy"><strong>Sahal</strong><small>Mobile wallet simulation</small></span>
+                            <span class="radio-mark" aria-hidden="true"></span>
+                        </label>
+                    </fieldset>
+                    <p class="method-error" id="method-error" role="alert"></p>
+                </form>
+            </section>
+
+            <aside class="order-panel" aria-labelledby="order-title">
+                <h2 id="order-title">Order Summary</h2>
+                <div id="payment-domains"></div>
+                <div class="payment-summary-row"><span>Registration period</span><strong>1 year</strong></div>
+                <div class="payment-summary-row"><span>Demonstration subtotal</span><strong id="payment-subtotal">$0 USD</strong></div>
+                <div class="payment-total"><span>Total to pay</span><strong id="payment-total">$0 USD</strong></div>
+                <p class="demo-notice"><strong>Demo payment only.</strong> No real money will be transferred and no banking credentials are required.</p>
+                <button class="pay-button" id="pay-button" type="button">Confirm Test Payment</button>
+                <a class="back-button" href="cart.html">Back</a>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

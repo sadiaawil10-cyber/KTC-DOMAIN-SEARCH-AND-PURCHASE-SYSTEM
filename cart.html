@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review domains in your MagacNet shopping cart.">
+    <title>Shopping Cart | MagacNet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="MagacNet home">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">MagacNet<span>.so</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <a class="cart-button" href="cart.html" aria-label="Open shopping cart">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.25"/><circle cx="19" cy="20" r="1.25"/><path d="M3 4h2l2.5 10.2a2 2 0 0 0 2 1.5h7.8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-heading">
+            <p>MagacNet Cart</p>
+            <h1>Your Shopping Cart</h1>
+        </div>
+
+        <div class="cart-layout">
+            <section class="cart-items" aria-labelledby="cart-items-title">
+                <h2 id="cart-items-title">Selected domains</h2>
+                <div id="cart-items-list"></div>
+            </section>
+
+            <aside class="order-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title">Order Summary</h2>
+                <div class="summary-row"><span>Domains</span><strong id="summary-count">0</strong></div>
+                <div class="summary-row"><span>Demonstration subtotal</span><strong id="subtotal-amount">$0 USD</strong></div>
+                <div class="summary-total"><span>Demonstration total</span><strong id="total-amount">$0 USD</strong></div>
+                <p class="summary-note">All amounts are temporary demonstration prices, not verified registrar pricing. Final amounts must be confirmed by the registrar.</p>
+                <a class="checkout-button" href="payment.html">Proceed to Checkout</a>
+                <a class="continue-button" href="index.html">Continue Shopping</a>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

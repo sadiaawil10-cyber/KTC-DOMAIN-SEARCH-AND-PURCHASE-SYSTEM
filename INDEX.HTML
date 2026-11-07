@@ -1,66 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SadiaNet.so</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and register the perfect domain name with MagacNet.">
+    <title>MagacNet | Domain Search and Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#" aria-label="MagacNet home">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">MagacNet<span>.so</span></span>
+            </a>
 
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a class="active" href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-<header class="navbar">
+            <div class="header-actions">
+                <a class="cart-button" href="cart.html" aria-label="Open shopping cart">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.25"/><circle cx="19" cy="20" r="1.25"/><path d="M3 4h2l2.5 10.2a2 2 0 0 0 2 1.5h7.8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-<div class="logo">
-<div class="logo-icon">S</div>
-<span>sadiaNet.so</span>
-</div>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <p class="provider-badge"><span></span> Official .so Registry &amp; Global Domain Provider</p>
+                <h1 id="hero-title">Find Your Perfect Domain Name</h1>
+                <p class="hero-copy">Your online identity starts here. Secure Somali national domains (.so) and global<br class="desktop-break"> extensions with instant DNS activation.</p>
 
-<nav class="nav-links" id="navLinks">
-<a href="#home" class="active">Home</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+                <form class="domain-search" id="domain-search-form" action="#results" method="get">
+                    <label class="search-field">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+                        <span class="sr-only">Domain name</span>
+                        <input id="domain-input" type="text" name="domain" placeholder="Enter your desired domain name..." aria-label="Enter a domain name" autocomplete="off">
+                    </label>
+                    <button class="search-button" id="search-button" type="submit"><span>Search Domain</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M14 7l5 5-5 5"/></svg>
+                    </button>
+                </form>
 
-<a href="search.html" class="login-btn">login</a>
+                <div class="popular-domains" aria-label="Popular domain extensions">
+                    <button class="extension-button" type="button">.so</button>
+                    <button type="button">.com</button>
+                    <button type="button">.ai</button>
+                    <button type="button">.org</button>
+                    <button type="button">.net</button>
+                </div>
+            </div>
+        </section>
 
-<button class="menu-btn" id="menuBtn">
-☰
-</button>
+        <section class="results-section" id="results" aria-labelledby="results-title">
+            <div class="results-heading">
+                <div class="results-title-wrap">
+                    <h2 id="results-title">Search Results</h2>
+                    <span class="result-count" id="result-count">Ready to search</span>
+                </div>
+                <div class="filter-actions" aria-label="Result filters">
+                    <button class="filter-button active" type="button" data-filter="all">All Extensions</button>
+                    <button class="filter-button" type="button" data-filter="available">Available Only</button>
+                </div>
+            </div>
 
-</header>
+            <div class="results-list" id="results-list" aria-live="polite">
+                <div class="results-state">
+                    <strong>Enter a domain name to see live results</strong>
+                    <span>Availability is checked directly from the domain registry.</span>
+                </div>
+            </div>
+        </section>
 
-<main id="home">
+        <section class="trust-section" aria-label="Service benefits">
+            <article class="trust-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-8 11h7l-1 9 8-12h-7z"/></svg>
+                <h2>Instant Somali .SO Activation</h2>
+                <p>Direct registry API links that resolve purchased domains instantly within minutes of successful payment and account verification.</p>
+            </article>
+            <article class="trust-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.6 2.9 8.7 7 10 4.1-1.3 7-5.4 7-10V6z"/></svg>
+                <h2>Complimentary WHOIS Privacy</h2>
+                <p>Your personal contact identity, phone number, and physical address are masked from public ICANN registries free of charge forever.</p>
+            </article>
+            <article class="trust-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M8 16c1 1 2.2 1.5 4 1.5s3-.5 4-1.5"/></svg>
+                <h2>24/7 Mogadishu &amp; Global NOC Support</h2>
+                <p>Dual technical operations centers in Mogadishu and Frankfurt ensure uninterrupted .SO uptime and 24/7 incident resolution.</p>
+            </article>
+        </section>
+    </main>
 
-<section class="hero">
+    <div class="modal-backdrop" id="domain-modal" hidden>
+        <section class="domain-modal" role="dialog" aria-modal="true" aria-labelledby="modal-domain-name">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Close domain details">&times;</button>
+            <div id="modal-content"></div>
+        </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-hidden="true"></div>
 
-<div class="hero-content">
-
-<h1>Find a domain for you.<br>
-Start today.
-</h1>
-
-  <p>
-   Get the perfect domain name for your business,
-  brand or personal project and bring your ideas
-online.
- </p>
- </div>
-
-<div class="hero-image">
-<img src="hero.image.jpeg" alt="Woman working on laptop">
-</div>
-
-</section>
-
-</main>
-
-<script src="script.js"></script>
-
-
-
-
-  
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a class="brand" href="#" aria-label="MagacNet home"><span class="brand-mark">M</span><span class="brand-name">MagacNet</span></a>
+                <p>© 2024 MagacNet. Official .so Registry Partner &amp; ICANN Accredited Registrar. All rights reserved.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#results">Domain Search</a>
+                <a href="cart.html">Checkout</a>
+                <a href="#">WHOIS</a>
+                <a href="#">DNS Services</a>
+                <a href="#contact">Support</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>

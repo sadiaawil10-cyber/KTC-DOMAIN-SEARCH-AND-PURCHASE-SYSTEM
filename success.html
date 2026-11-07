@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MagacNet demonstration payment confirmation.">
+    <title>Payment Successful | MagacNet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="success.css">
+    <script src="success.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="MagacNet home">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">MagacNet<span>.so</span></span>
+            </a>
+        </div>
+    </header>
+
+    <main class="success-page">
+        <section class="success-card" aria-labelledby="success-title">
+            <div class="success-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>
+            </div>
+            <p class="success-label">Demonstration complete</p>
+            <h1 id="success-title">Payment Successful!</h1>
+            <p class="success-message">Your test domain order has been completed successfully. No real payment was transferred and no domain registration has been submitted to a registrar.</p>
+
+            <div class="order-details">
+                <div class="detail-domain">
+                    <span>Purchased domain</span>
+                    <strong id="success-domain">Information unavailable</strong>
+                </div>
+                <div class="detail-grid">
+                    <div><span>Order reference</span><strong id="success-reference">Information unavailable</strong></div>
+                    <div><span>Amount</span><strong id="success-amount">$0 USD</strong></div>
+                    <div><span>Payment method</span><strong id="success-method">Information unavailable</strong></div>
+                    <div><span>Purchase date</span><strong id="success-date">Information unavailable</strong></div>
+                </div>
+            </div>
+
+            <a class="home-button" id="back-home" href="index.html">Back to Home</a>
+        </section>
+    </main>
+</body>
+</html>
